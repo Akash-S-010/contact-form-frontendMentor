@@ -61,9 +61,7 @@ label{
     width: 100%;
     cursor: pointer;
 }
-.color-inp:hover, textarea:hover{
-    border: 1px solid hsl(169, 82%, 27%);
-}
+
 .color-inp:focus, textarea:focus{
     outline: 1px solid hsl(169, 82%, 27%);
 }
@@ -122,16 +120,20 @@ button:hover{
 }
 .attribution{
     position: absolute;
-    bottom: 1%;
+    bottom: 0%;
+    font-size: 12px;
 }
 input[type=checkbox]{
     accent-color: var(--green-600);
     width: 15px;
 }
-.error{
+.error-hidden{
+    display: none;
     font-size: 14px;
-    display: block;
     color: hsl(0, 66%, 54%);
+}
+.inpError{
+    border: 1px solid hsl(0, 66%, 54%);
 }
 .hidden{
     display: none;
@@ -140,6 +142,7 @@ input[type=checkbox]{
     color: var(--green-600);
 }
 .popup{
+    transform: translateY(-200px);
     position: fixed;
     top: 30px;
     width: 350px;
@@ -148,7 +151,12 @@ input[type=checkbox]{
     border-radius: 10px;
     color: var(--white);
     font-size: 14px;
-    transition: all 1s linear;
+    transition: all .5s linear;
+    opacity: 0;
+}
+.popup.show {
+    transform: translateY(0px);
+    opacity: 1;
 }
 .popup div{
     display: flex;

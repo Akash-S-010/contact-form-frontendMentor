@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-
   <title>Frontend Mentor | Contact form</title>
 </head>
 
 <body>
   <div class="popup">
-    <div >
+    <div>
       <img src="./assets/images/icon-success-check.svg" alt="popup-img">
       <p>Message Sent!</p>
     </div>
@@ -22,33 +18,33 @@
   </div>
   <div class="form-container">
     <h1>Contact Us</h1>
-    <form class="form">
+    <form class="form" id="form">
       <div class="name-inputs">
         <div class="form-group">
           <label for="firstname">First Name <span class="star">*</span></label>
-          <input type="text" id="firstname" class="color-inp">
+          <input type="text" id="firstname" name="firstname" class="color-inp">
           <span class="error-hidden">This field is required</span>
         </div>
         <div class="form-group">
           <label for="lastname">Last name <span class="star">*</span></label>
-          <input type="text" id="lastname" class="color-inp">
+          <input type="text" id="lastname" name="lastname" class="color-inp">
           <span class="error-hidden">This field is required</span>
         </div>
       </div>
       <div class="form-group">
         <label for="email">Email Address <span class="star">*</span></label>
-        <input type="email" id="email" class="color-inp">
-        <span class="error-hidden">This field is required</span>
+        <input type="email" id="email" name="email" class="color-inp">
+        <span class="error-hidden">Please enter a valid email address</span>
       </div>
       <div class="form-group radio">
         <label for="query">Query Type <span class="star">*</span></label>
         <div id="query">
           <div class="query-type">
-            <input type="radio" name="query-type" id="option1">
+            <input type="radio" name="querytype" id="option1">
             <label for="option1">General Enquiry</label>
           </div>
           <div class="query-type">
-            <input type="radio" name="query-type" id="option2">
+            <input type="radio" name="querytype" id="option2">
             <label for="option2">Support Request</label>
           </div>
         </div>
@@ -56,20 +52,23 @@
       </div>
       <div class="form-group">
         <label for="message">Message<span class="star">*</span></label>
-        <textarea id="message" rows="4"></textarea>
+        <textarea id="message" name="message" rows="4"></textarea>
         <span class="error-hidden">This field is required</span>
       </div>
       <div class="form-group checkbox">
         <div>
-          <input type="checkbox" id="consent">
+          <input type="checkbox" name="consent" id="consent">
           <label for="consent">I consent to being contacted by the team <span class="star">*</span></label>
         </div>
-        <span class="error-hidden">To submit this form, please consent to being contacted</span>
+        <span class="error-hidden">To submit this form , please consent to being contacted</span>
       </div>
       <button type="submit">Submit</button>
     </form>
   </div>
 
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
   <script src="script.js"></script>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
